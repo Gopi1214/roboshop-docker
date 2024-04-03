@@ -8,7 +8,7 @@ RUN rm -rf /etc/nginx/conf.d/default.conf
 
 RUN rm -rf /etc/nginx/default.d/roboshop.conf
 
-COPY roboshop.conf /etc/nginx/default.d/
+COPY roboshop.conf /etc/nginx/nginx.conf
 
 ADD static /usr/share/nginx/html/
 

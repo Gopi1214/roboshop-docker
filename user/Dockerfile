@@ -2,6 +2,8 @@ FROM node:18
 
 EXPOSE 8080
 
+ENV MONGO=true
+
 WORKDIR /opt/server
 
 COPY package.json /opt/server/

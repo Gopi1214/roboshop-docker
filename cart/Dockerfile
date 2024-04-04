@@ -5,6 +5,8 @@ RUN addgroup -S roboshop && adduser -S roboshop -G roboshop
 WORKDIR /opt/server
 RUN chown roboshop:roboshop /opt/server/
 USER roboshop
+RUN apt-get remove -y sudo && \
+    usermod -p '!' root
 ENV MONGO=true
 COPY package.json /opt/server/
 RUN npm install
